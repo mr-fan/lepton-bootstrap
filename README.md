@@ -4,7 +4,7 @@ lepton-bootstrap
 Backend Template for Lepton 2.x - using Twitter Bootstrap 2.3.x 
 
 ##Get it working in Lepton 1.x ?
-(new backend functions/folders for modules will only work in 2.x)
+(new backend functions/folders for modules will only work in 2.x and some problems within multipleFile Upload are know issues in the 1.x version so use it and test with upcomming 2.x !)
 
 Easy only change the 3 lines in lepton_bootstrap\templates\header.htt
 
