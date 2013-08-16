@@ -1,0 +1,30 @@
+<form name="rename" action="index.php" method="post">
+	<fieldset>
+	<legend>{TEXT_RENAME} <span class="badge badge-info">{TEXT_CURRENT_FOLDER}: {ROOT_DIRECTORY}{CURRENT_PATH}</span></legend>
+		<div class="row-fluid">
+			<div class="span110 offset2">
+				<input type="hidden" name="action" value="save_media_rename">
+				<input type="hidden" name="current_dir" value="{CURRENT_PATH}">
+				<input type="hidden" name="old_name" value="{BASENAME}">
+				<input type="hidden" name="extension" value="{FILE_EXT}">
+				<input type="hidden" name="filetype" value="{FILE_TYPE}">
+				<div class="control-group">
+					<label class="control-label" for="display_name">'{FILENAME}'</strong> {TEXT_RENAME} </label>
+					<div class="controls">
+						<input type="text" name="name" value="{BASENAME}">
+						<script type="text/javascript">
+						document.rename.name.select();
+						</script>
+						 {EXTENSION}
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<input class="btn btn-success" type="submit" name="save" value="{TEXT_RENAME}">
+						<input class="reset btn btn-danger" type="submit" name="cancel" value="{TEXT_CANCEL}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</form>

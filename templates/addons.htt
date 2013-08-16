@@ -1,0 +1,81 @@
+<!-- BEGIN main_block -->
+<p class="text-right">
+		<a href="{ADVANCED_URL}?advanced" class="btn btn-info btn-primary" rel="tooltip" data-placement="top" data-original-title="{TEXT_ADVANCED}" data-toggle="modal">
+			<i class="icon-admintools"></i> {TEXT_ADVANCED}
+		</a>
+</p>
+<hr>
+<!-- BEGIN reload_block -->
+		<!-- Addons Modal -->
+		<div id="addonsModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="helpLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 id="helpLabel">{TXT_ADMIN_SETTINGS}</h3>
+			</div>
+			<div class="modal-body">
+				<p>{MESSAGE_RELOAD_ADDONS}</p>
+				<form action="{RELOAD_URL}" method="post">
+					<label class="checkbox inline">
+						<input {DISPLAY_MODULES} type="checkbox" name="reload_modules" id="reload_modules" value="true"> {MODULES}
+					</label>
+					<label class="checkbox inline">
+						<input {DISPLAY_TEMPLATES} type="checkbox" name="reload_templates" id="reload_templates" value="true"> {TEMPLATES}
+					</label>
+					<label class="checkbox inline">
+						<input {DISPLAY_LANGUAGES} type="checkbox" name="reload_languages" id="reload_languages" value="true"> {LANGUAGES}
+					</label>
+					<input class="btn btn-danger" type="submit" name="submit" value="{TEXT_RELOAD}" />
+				</form>	
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+		<!-- Addons Modal -->
+<!-- END reload_block -->
+<div class="row-fluid">
+	<div class="media span4 well" style="{DISPLAY_MODULES}">
+		<a class="pull-left no-underline" href={ADMIN_URL}/modules/index.php>
+			<i class="icon-4x icon-puzzle-piece"></i>
+		</a>
+		<div class="media-body">
+			<a href="{ADMIN_URL}/modules/index.php">
+				<h4 class="media-heading">
+					{MODULES}
+				</h4>
+			</a>
+			<br />
+			{MODULES_OVERVIEW}
+		</div>
+	</div>
+	<div class="media span4 well" style="{DISPLAY_TEMPLATES}">
+		<a class="pull-left no-underline" href="{ADMIN_URL}/templates/index.php">
+			<i class="icon-4x icon-copy"></i>
+		</a>
+		<div class="media-body">
+			<a href="{ADMIN_URL}/modules/index.php">
+				<h4 class="media-heading">
+					{TEMPLATES}
+				</h4>
+			</a>
+			<br />
+			{TEMPLATES_OVERVIEW}
+		</div>
+	</div>
+	<div class="media span4 well" style="{DISPLAY_LANGUAGES}">
+		<a class="pull-left no-underline" href="{ADMIN_URL}/languages/index.php">
+			<i class="icon-4x icon-comments-alt"></i>
+		</a>
+		<div class="media-body">
+			<a href="{ADMIN_URL}/languages/index.php">
+				<h4 class="media-heading">
+					{LANGUAGES}
+				</h4>
+			</a>
+			<br />
+			{LANGUAGES_OVERVIEW}
+		</div>
+	</div>
+</div>
+<br class="clearfix">
+<!-- END main_block -->

@@ -1,0 +1,7 @@
+<!-- BEGIN main_block -->
+<div class="alert alert-block alert-error fade in">
+	<button data-dismiss="alert" class="close" type="button"><i class="icon-remove-sign"></i></button>
+	<h4 class="text-center">{MESSAGE}</h4>
+	<a target="_top" href="{LINK}">{BACK}</a>
+</div>
+<!-- END main_block -->

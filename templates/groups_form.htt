@@ -1,0 +1,350 @@
+<!-- BEGIN main_block -->
+<div class="row-fluid {DISPLAY_ADVANCED_BUTTON}">
+	<div class="span5	">
+		<h2 style="{DISPLAY_EXTRA}"><i class="icon-edit-sign"></i> {HEADING_MODIFY_GROUP}</h2>		
+	</div>
+	<div class="span6">
+	<form name="advanced" action="{ADVANCED_ACTION}" method="post">
+	<input type="hidden" name="group_id" value="{GROUP_ID}" />
+	<input type="hidden" name="action" value="modify" />
+		<h3>
+			<button title="{ADVANCED_BUTTON}" class="btn btn-danger" type="submit" name="advanced" onclick="window.location = '{ADVANCED_LINK}';" value="{ADVANCED_BUTTON}" />
+			<i class="icon-preferences"></i>
+			 {ADVANCED_BUTTON}
+			</button>
+		</h3>
+	</form>
+	</div>
+</div>
+<form name="group" action="{ACTION_URL}" method="post" class="{DISPLAY_ADD} form-horizontal">
+	<input type="hidden" name="advanced" value="{ADVANCED}">
+	<input type="hidden" name="group_id" value="{GROUP_ID}">
+		{FTAN}
+	<div class="row-fluid"> <!--System permissions-->
+		<div class="span12">
+			<div class="control-group">
+				<label class="control-label" for="group_name">{TEXT_NAME}</label>
+				<div class="controls">
+					<input type="text" name="group_name" maxlength="255" value="{GROUP_NAME}">
+				</div>
+			</div>
+			<div class="control-group well" style="{DISPLAY_BASIC}"> <!-- Basic permissions -->
+				<h3><i class="icon-preferences"></i> {TEXT_SYSTEM_PERMISSIONS}</h3>
+				<div class="controls">
+						<label for="pages" class="checkbox inline">
+							<input type="checkbox" name="pages" id="pages" value="1" {pages_checked}>
+								{SECTION_PAGES}
+						</label>
+						<label for="media" class="checkbox inline">
+							<input type="checkbox" name="media" id="media" value="1" {media_checked}>
+								{SECTION_MEDIA}
+						</label>
+						<label for="modules" class="checkbox inline">
+							<input type="checkbox" name="modules" id="modules" value="1" {modules_checked}>
+								{SECTION_MODULES}
+						</label>
+						<label for="templates" class="checkbox inline">
+							<input type="checkbox" name="templates" id="templates" value="1" {templates_checked}>
+								{SECTION_TEMPLATES}
+						</label>
+						<label for="languages" class="checkbox inline">
+							<input type="checkbox" name="languages" id="languages" value="1" {languages_checked}>
+								{SECTION_LANGUAGES}
+						</label>
+						<label for="settings" class="checkbox inline">
+							<input type="checkbox" name="settings" id="settings" value="1" {settings_checked}>
+								{SECTION_SETTINGS}
+						</label>
+						<label for="users" class="checkbox inline">
+							<input type="checkbox" name="users" id="users" value="1" {users_checked}>
+								{SECTION_USERS}
+						</label>
+						<label for="groups" class="checkbox inline">
+							<input type="checkbox" name="groups" id="groups" value="1" {groups_checked}>
+								{SECTION_GROUPS}
+						</label>
+						<label for="admintools" class="checkbox inline">
+							<input type="checkbox" name="admintools" id="admintools" value="1" {admintools_checked} onchange="at_on(this);">
+								{SECTION_ADMINTOOLS}
+						</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid" style="{DISPLAY_ADVANCED}"> <!--Advanced system permissions-->
+		<div class="span12">
+			<div class="control-group">
+				<h3><i class="icon-preferences"></i> {TEXT_SYSTEM_PERMISSIONS}</h3>
+			</div>
+			<div class="control-group well"> <!--Advanced pages-->
+				<label class="control-label"><h4><i class="icon-pages"></i>  {SECTION_PAGES}</h4></label>
+				<div class="controls">
+						<label for="pages_view" class="checkbox inline">
+							<input name="pages_view" id="pages_view" type="checkbox" value="1" {pages_view_checked}>
+								{TEXT_VIEW}
+						</label>
+						<label for="pages_add" class="checkbox inline">
+							<input name="pages_add" id="pages_add" type="checkbox" value="1" {pages_add_checked}>
+								{TEXT_ADD}
+						</label>
+						(<label for="pages_add_l0" class="checkbox inline">
+							<input name="pages_add_l0" id="pages_add_l0" type="checkbox" value="1" {pages_add_l0_checked}>
+								{TEXT_LEVEL} 0
+						</label>)
+						<label for="pages_settings" class="checkbox inline">
+							<input name="pages_settings" id="pages_settings" type="checkbox" value="1" {pages_settings_checked}>
+								{TEXT_MODIFY_SETTINGS}
+						</label>
+						<label for="pages_modify" class="checkbox inline">
+							<input name="pages_modify" id="pages_modify" type="checkbox" value="1" {pages_modify_checked}>
+								{TEXT_MODIFY_CONTENT}
+						</label>
+						<label for="pages_intro" class="checkbox inline">
+							<input name="pages_intro" id="pages_intro" type="checkbox" value="1" {pages_intro_checked}>
+								{HEADING_MODIFY_INTRO_PAGE}
+						</label>
+						<label for="pages_delete" class="checkbox inline">
+							<input name="pages_delete" id="pages_delete" type="checkbox" value="1" {pages_delete_checked}>
+								{TEXT_DELETE}
+						</label>
+				</div>
+			</div>
+			<div class="control-group well"> <!--Advanced media-->
+				<label class="control-label"><h4><i class="icon-media"></i>  {SECTION_MEDIA}</h4></label>
+				<div class="controls">
+						<label for="media_view" class="checkbox inline">
+							<input name="media_view" id="media_view" type="checkbox" value="1" {media_view_checked}>
+								{TEXT_VIEW}
+						</label>
+						<label for="media_upload" class="checkbox inline">
+							<input name="media_upload" id="media_upload" type="checkbox" value="1" {media_upload_checked}>
+								{TEXT_UPLOAD_FILES}
+						</label>
+						<label for="media_rename" class="checkbox inline">
+							<input name="media_rename" id="media_rename" type="checkbox" value="1" {media_rename_checked}>
+								{TEXT_RENAME}
+						</label>
+						<label for="media_delete" class="checkbox inline">
+							<input name="media_delete" id="media_delete" type="checkbox" value="1" {media_delete_checked}>
+								{TEXT_DELETE}
+						</label>
+						<label for="media_create" class="checkbox inline">
+							<input name="media_create" id="media_create" type="checkbox" value="1" {media_create_checked}>
+								{TEXT_CREATE_FOLDER}
+						</label>
+				</div>
+			</div>
+			<div class="control-group well"> <!--Advanced modules-->
+				<label class="control-label"><h4><i class="icon-modules"></i>  {SECTION_MODULES}</h4></label>
+				<div class="controls"> 
+						<label for="modules_view" class="checkbox inline">
+							<input name="modules_view" id="modules_view" type="checkbox" value="1" {modules_view_checked}>
+								{TEXT_VIEW}
+						</label>
+						<label for="modules_install" class="checkbox inline">
+							<input name="modules_install" id="modules_install" type="checkbox" value="1" {modules_install_checked}>
+								{TEXT_ADD}
+						</label>
+						<label for="modules_uninstall" class="checkbox inline">
+							<input name="modules_uninstall" id="modules_uninstall" type="checkbox" value="1" {modules_uninstall_checked}>
+								{TEXT_DELETE}
+						</label>
+				</div>
+			</div>
+			<div class="control-group well"> <!--Advanced templates-->
+				<label class="control-label"><h4><i class="icon-templates"></i>  {SECTION_TEMPLATES}</h4></label>
+				<div class="controls"> 
+						<label for="templates_view" class="checkbox inline">
+							<input name="templates_view" id="templates_view" type="checkbox" value="1" {templates_view_checked}>
+								{TEXT_VIEW}
+						</label>
+						<label for="templates_install" class="checkbox inline">
+							<input name="templates_install" id="templates_install" type="checkbox" value="1" {templates_install_checked}>
+								{TEXT_ADD}
+						</label>
+						<label for="templates_uninstall" class="checkbox inline">
+							<input name="templates_uninstall" id="templates_uninstall" type="checkbox" value="1" {templates_uninstall_checked}>
+								{TEXT_DELETE}
+						</label>
+				</div>
+			</div>
+			<div class="control-group well"> <!--Advanced languages-->
+				<label class="control-label"><h4><i class="icon-languages"></i>  {SECTION_LANGUAGES}</h4></label>
+				<div class="controls"> 
+						<label for="languages_view" class="checkbox inline">
+							<input name="languages_view" id="languages_view" type="checkbox" value="1" {languages_view_checked}>
+								{TEXT_VIEW}
+						</label>
+						<label for="languages_install" class="checkbox inline">
+							<input name="languages_install" id="languages_install" type="checkbox" value="1" {languages_install_checked}>
+								{TEXT_ADD}
+						</label>
+						<label for="languages_uninstall" class="checkbox inline">
+							<input name="languages_uninstall" id="languages_uninstall" type="checkbox" value="1" {languages_uninstall_checked}>
+								{TEXT_DELETE}
+						</label>
+				</div>
+			</div>
+			<div class="control-group well"> <!--Advanced settings-->
+				<label class="control-label"><h4><i class="icon-settings"></i>  {SECTION_SETTINGS}</h4></label>
+				<div class="controls"> 
+						<label for="settings_basic" class="checkbox inline">
+							<input name="settings_basic" id="settings_basic" type="checkbox" value="1" {settings_basic_checked}>
+								{TEXT_BASIC}
+						</label>
+						<label for="settings_advanced" class="checkbox inline">
+							<input name="settings_advanced" id="settings_advanced" type="checkbox" value="1" {settings_advanced_checked}>
+								{TEXT_ADVANCED}
+						</label>
+				</div>
+			</div>
+			<div class="control-group well"> <!--Advanced users-->
+				<label class="control-label"><h4><i class="icon-access"></i>  {SECTION_USERS}</h4></label>
+				<div class="controls"> 
+						<label for="users_view" class="checkbox inline">
+							<input name="users_view" id="users_view" type="checkbox" value="1" {users_view_checked}>
+								{TEXT_VIEW}
+						</label>
+						<label for="users_add" class="checkbox inline">
+							<input name="users_add" id="users_add" type="checkbox" value="1" {users_add_checked}>
+								{TEXT_ADD}
+						</label>
+						<label for="users_modify" class="checkbox inline">
+							<input name="users_modify" id="users_modify" type="checkbox" value="1" {users_modify_checked}>
+								{TEXT_MODIFY}
+						</label>
+						<label for="users_delete" class="checkbox inline">
+							<input name="users_delete" id="users_delete" type="checkbox" value="1" {users_delete_checked}>
+								{TEXT_DELETE}
+						</label>
+				</div>
+			</div>
+			<div class="control-group well"> <!--Advanced groups-->
+				<label class="control-label"><h4><i class="icon-group"></i>  {SECTION_GROUPS}</h4></label>
+				<div class="controls"> 
+						<label for="groups_view" class="checkbox inline">
+							<input name="groups_view" id="groups_view" type="checkbox" value="1" {groups_view_checked}>
+								{TEXT_VIEW}
+						</label>
+						<label for="groups_add" class="checkbox inline">
+							<input name="groups_add" id="groups_add" type="checkbox" value="1" {groups_add_checked}>
+								{TEXT_ADD}
+						</label>
+						<label for="groups_modify" class="checkbox inline">
+							<input name="groups_modify" id="groups_modify" type="checkbox" value="1" {groups_modify_checked}>
+								{TEXT_MODIFY}
+						</label>
+						<label for="groups_delete" class="checkbox inline">
+							<input name="groups_delete" id="groups_delete" type="checkbox" value="1" {groups_delete_checked}>
+								{TEXT_DELETE}
+						</label>
+				</div>
+			</div>
+			<div class="control-group well"> <!--Advanced admintools-->
+				<label class="control-label"><h4><i class="icon-admintools"></i>  {SECTION_ADMINTOOLS}</h4></label>
+				<div class="controls"> 
+						<label for="admintools_settings" class="checkbox inline">
+							<input name="admintools_settings" id="admintools_settings" type="checkbox" value="1" {admintools_settings_checked} onchange="at_on(this);">
+								{TEXT_MODIFY_SETTINGS}
+						</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<hr />
+	<div class="row-fluid"> <!--Modul permissions-->
+		<div class="span12">
+			<div class="control-group well">
+				<h3><i class="icon-addons"></i> {TEXT_MODULE_PERMISSIONS}</h3>
+				<div class="controls">
+					<!-- BEGIN module_list_block -->
+					<label for="m_{VALUE}" class="checkbox inline">
+						<input type="checkbox" name="module_permissions[]" id="m_{VALUE}" value="{VALUE}" {CHECKED} {JS_ADDITIOM}>
+							{NAME}
+					</label>					
+					<!-- END module_list_block -->					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid"> <!--Admintools permissions-->
+		<div class="span12">
+			<div class="control-group well">
+				<h3><i class="icon-admintools"></i> {SECTION_ADMINTOOLS}</h3>
+				<div class="controls">
+					<!-- BEGIN admintools_list_block -->
+					<label for="m_{VALUE}" class="checkbox inline">
+						<input type="checkbox" name="module_permissions[]" id="m_{VALUE}" value="{VALUE}" {CHECKED} {JS_ADDITIOM}>
+							{NAME}
+					</label>					
+					<!-- END admintools_list_block -->					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid"> <!--Templates permissions-->
+		<div class="span12">
+			<div class="control-group well">
+				<h3><i class="icon-copy"></i> {TEXT_TEMPLATE_PERMISSIONS}</h3>
+				<div class="controls">
+					<!-- BEGIN module_list_block -->
+					<label for="t_{TEMPLATE_VALUE}" class="checkbox inline">
+						<input type="checkbox" name="template_permissions[]" id="t_{TEMPLATE_VALUE}" value="{TEMPLATE_VALUE}" {CHECKED}>
+							{TEMPLATE_NAME}
+					</label>					
+					<!-- END module_list_block -->	
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid"> <!--Save/Reset-->
+		<div class="span12">
+			<div class="control-group">
+				<div class="controls">
+					<input class="btn btn-success inline" type="submit" name="submit" value="{SUBMIT_TITLE}">
+					<input class="btn btn-danger inline" type="reset" name="reset" value="{TEXT_RESET}">
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+<script type="text/javascript">
+var admin_checkbox = document.getElementById("admintools");
+var admin_settings = document.getElementById("admintools_settings");
+
+var admin_tools = new Array({JS_ADMIN_TOOLS_ARRAY});
+var admin_qr = new Array();
+for(var i=0; i< admin_tools.length; i++) {
+	admin_qr[ admin_tools[i] ] = document.getElementById( admin_tools[i] );
+}
+function check(aRef) {
+	if (aRef.checked == true) {
+		if (admin_checkbox) {
+			admin_checkbox.checked = true;
+			admin_settings.checked = true;
+		}
+	} else {
+		var state_counter = 0;
+		for(var i = 0; i< admin_tools.length; i++) {
+			var r = admin_qr[ admin_tools[i] ];
+			if (r) {
+				if (r.checked == true) state_counter++;
+			}
+		}
+		if (admin_checkbox) {
+			admin_checkbox.checked = (state_counter > 0);
+			admin_settings.checked = (state_counter > 0);
+		}
+	}
+}
+function at_on(aRef) {
+	for(var i = 0; i< admin_tools.length; i++) {
+		var r = admin_qr[ admin_tools[i] ];
+		if (r) {
+			r.checked = aRef.checked;
+		}
+	}
+}
+</script>
+<!-- END main_block -->

@@ -1,0 +1,33 @@
+<!-- BEGIN main_block -->
+<div class="row-fluid">
+	<div></div>
+		<!-- BEGIN show_cmd_users_block -->
+		<div class="media span5 well {DISPLAY_USERS}">
+			<a class="pull-left" href="{ADMIN_URL}/users/index.php">
+				<i class="icon-2x icon-access"></i>
+			</a>
+			<div class="media-body">
+				<a href="{ADMIN_URL}/users/index.php">
+					<h4 class="media-heading">{USERS}</h4>
+				</a>
+				<br />
+				{USERS_OVERVIEW}
+			</div>
+		</div>
+		<!-- END show_cmd_users_block -->
+		<!-- BEGIN show_cmd_groups_block -->
+		<div class="media span5 well {DISPLAY_GROUPS}">
+			<a class="pull-left" href="{ADMIN_URL}/groups/index.php">
+				<i class="icon-2x icon-group"></i>
+			</a>
+			<div class="media-body">
+				<a href="{ADMIN_URL}/groups/index.php">
+					<h4 class="media-heading">{GROUPS}</h4>
+				</a>
+				<br />
+				{GROUPS_OVERVIEW}
+			</div>
+		</div>
+		<!-- END show_cmd_groups_block -->
+</div>
+<!-- END main_block -->

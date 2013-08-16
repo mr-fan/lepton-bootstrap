@@ -1,0 +1,27 @@
+<!-- BEGIN main_block -->
+<div class="row-fluid">
+	<!-- BEGIN tool_list_block -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var TOOL_DIR = "{TOOL_DIR}"
+		// Select all elements with an ID starting a icon:
+		$("div.media.{TOOL_DIR} i").addClass(TOOL_DIR);
+	});
+	</script>
+		<div class="media {TOOL_DIR} span5 well">
+			<a class="pull-left no-underline" href="{ADMIN_URL}/admintools/tool.php?tool={TOOL_DIR}">
+				<i class="icon-4x icon-admintools"></i>
+			</a>
+			<div class="media-body">
+				<a href="{ADMIN_URL}/admintools/tool.php?tool={TOOL_DIR}">
+					<h4 class="media-heading">{TOOL_NAME}</h4>
+				</a>
+				<br />
+				{TOOL_DESCRIPTION}
+			</div>
+		</div>
+	<!-- END tool_list_block -->
+	{TOOL_LIST}
+</div>
+<br class="clearfix">
+<!-- END main_block -->

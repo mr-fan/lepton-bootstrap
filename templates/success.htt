@@ -1,0 +1,15 @@
+<!-- BEGIN main_block -->
+<div class="alert alert-block alert-success fade in">
+	<button data-dismiss="alert" class="close" type="button"><i class="icon-remove-sign"></i></button>
+	<h4 class="text-center">{MESSAGE}</h4>
+	<!-- BEGIN show_redirect_block -->
+	<script type="text/javascript">
+		window.setTimeout("top.location.href ='{REDIRECT}'", {REDIRECT_TIMER});
+		window.setTimeout(function() { $(".alert").alert('close'); }, {REDIRECT_TIMER});
+	</script>
+	<!-- END show_redirect_block -->
+	<h3 style="text-align: center;">
+		<a target="_top" href="{REDIRECT}" title="{NEXT}">{BACK}</a>
+	</h3>
+</div>
+<!-- END main_block -->

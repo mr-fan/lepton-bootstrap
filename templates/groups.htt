@@ -1,0 +1,29 @@
+<!-- BEGIN main_block -->
+<p class="text-right">
+	<!-- BEGIN manage_groups_block -->
+	<a class="btn btn-info" href="{ADMIN_URL}/users/index.php">
+		<i class="icon-access"></i> {TEXT_MANAGE_USERS}</a>
+	<!-- END manage_groups_block -->
+</p>
+<hr>
+<div class="row-fluid">
+	<div class="span12">
+		<form name="groupsform" action="groups.php" method="post">
+			<input type="hidden" name="action" value="delete" />
+			<fieldset>
+			<legend><h2><i class="icon-group"></i> {HEADING_MODIFY_DELETE_GROUP}</h2></legend>
+				<div class="row-fluid">
+					<select name="group_id" class="span6 no-margin">
+					  <!-- BEGIN list_block -->
+					  <option value="{VALUE}">{NAME}</option>
+					  <!-- END list_block -->
+					</select>
+					<input type="submit" name="modify" value="{TEXT_MODIFY}" class="{DISPLAY_MODIFY} btn btn-success">
+					<input type="submit" name="delete" value="{TEXT_DELETE}" onclick="return confirm('{CONFIRM_DELETE}');" class="btn btn-danger {DISPLAY_DELETE}">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<h2 class="{DISPLAY_ADD}"><i class="icon-plus-sign-alt"></i> {HEADING_ADD_GROUP}</h2>
+<!-- END main_block -->
