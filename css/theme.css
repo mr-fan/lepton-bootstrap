@@ -9,7 +9,12 @@
  *  @requirements   PHP 5.2.x and higher
  */
 
-/* admintools setup special icons */
+/* admintools setup special icons 
+->simple set the content attribute from the icon of your choice
+http://getbootstrap.com/2.3.2/base-css.html#icons
+and add it like the following exaples 
+.icon-admintools.your_admin_tool_name:before {content:"\code"; }
+*/
 .icon-admintools.addon_file_editor:before { content:"\f07b"; }
 .icon-admintools.captcha_control:before { content:"\f132"; }
 .icon-admintools.dropleps:before { content:"\f121"; }
