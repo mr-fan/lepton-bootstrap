@@ -27,6 +27,7 @@ in
 - Special admintoolicons possible to setup via the theme.css (look at the CSS file <https://github.com/mr-fan/lepton-bootstrap/blob/master/css/theme.css>)
 - Using modals, tooltips, popovers and some other jquery stuff for easy additional content like helpmodal for editors
 - codecleaning and first HTML5/CSS3 Admintheme (not finished yet)
+- Change fast the complete look and feel with some of patterns from www.subtlepatterns.com (look at the readme file <https://github.com/mr-fan/lepton-bootstrap/blob/master/img/pattern/README.md>
 
 
 ##Not for productive use!!
