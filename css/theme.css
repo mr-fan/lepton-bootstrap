@@ -121,6 +121,7 @@ img.page_list_rights {
     display: block;
     float: left;
     padding-right: 7px;
+    margin-right: 10px;
 }
 .pages_list ul {
     font-weight: normal;
