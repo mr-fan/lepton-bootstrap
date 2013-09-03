@@ -1,65 +1,67 @@
 <!-- BEGIN main_block -->
 <p class="text-right">
-		<span class="btn btn-info">{URL_TEMPLATES}</button></span>
-		<span class="btn btn-info">{URL_LANGUAGES}</button></span>
+		{URL_TEMPLATES}
+		{URL_LANGUAGES}
 		<a href="{ADMIN_URL}/addons?advanced" class="btn btn-info btn-primary" rel="tooltip" data-placement="top" data-original-title="{TEXT_ADVANCED}" data-toggle="modal">
 			<i class="icon-admintools"></i> {TEXT_ADVANCED}
 		</a>
 </p>
 <hr>
-<div class="row-fluid">
-	<div class="span4">
+<div class="row">
+	<div class="equal col-md-4">
 		<form name="install" enctype="multipart/form-data" action="install.php" method="post" class="{DISPLAY_INSTALL}">
 			<fieldset>
-			<legend><h2><i class="icon-plus-sign-alt"></i> {HEADING_INSTALL_MODULE}</h2></legend>
-				<div class="row-fluid">
-						<div class="span6">
-							<input type="file" name="userfile" class="fileupload">
-							<script type="text/javascript">
-							document.install.userfile.focus();
-							</script>
-					</div>
+				<legend>
+					<h2><i class="icon-plus-sign-alt"></i> {HEADING_INSTALL_MODULE}</h2>
+				</legend>
+				<div class="form-group">
+					<input type="file" name="userfile" class="fileupload">
+					<script type="text/javascript">
+					document.install.userfile.focus();
+					</script>
 				</div>
-				<div class="row-fluid">
-					<div class="span12">
-						<input class="btn btn-success" type="submit" name="submit" value="{TEXT_INSTALL}">
-					</div>
+				<div class="form-group">
+					<button type="submit" name="submit" value="{TEXT_INSTALL}" class="btn btn-success">{TEXT_INSTALL}</button>				
 				</div>
 			</fieldset>
 		</form>
 	</div>
-	<div class="span4">
+	<div class="equal col-md-4">
 		<form name="uninstall" action="uninstall.php" method="post" class="{DISPLAY_UNINSTALL}">
 			<fieldset>
-			<legend><h2><i class="icon-minus-sign-alt"></i> {HEADING_UNINSTALL_MODULE}</h2></legend>
-				<div class="row-fluid">
-					<div class="span12">
-						<select name="file" class="span12">
-						<option value="" selected="selected">{TEXT_PLEASE_SELECT}...</option>
-						<!-- BEGIN module_list_block -->
-							<option value="{VALUE}">{NAME}</option>
-						  <!-- END module_list_block -->
-						</select>
-						<input class="btn btn-danger" type="submit" name="submit" value="{TEXT_UNINSTALL}">
-					</div>
+				<legend>
+					<h2><i class="icon-minus-sign-alt"></i> {HEADING_UNINSTALL_MODULE}</h2>
+				</legend>
+				<div class="form-group">
+					<select name="file" class="form-control">
+					<option value="" selected="selected">{TEXT_PLEASE_SELECT}...</option>
+					<!-- BEGIN module_list_block -->
+						<option value="{VALUE}">{NAME}</option>
+					  <!-- END module_list_block -->
+					</select>
+				</div>
+				<div class="form-group">			
+					<button class="btn btn-danger" type="submit" name="submit" value="{TEXT_UNINSTALL}">{TEXT_UNINSTALL}</button>
 				</div>
 			</fieldset>
 		</form>
 	</div>
-	<div class="span4">
+	<div class="equal col-md-4">
 		<form name="details" action="details.php" method="post" class="{DISPLAY_LIST}">
 			<fieldset>
-				<legend><h2><i class="icon-info-sign"></i> {HEADING_MODULE_DETAILS}</h2></legend>
-					<div class="row-fluid">
-						<div class="span12">
-							<select name="file" style="width: 97%;">
-							<option value="" selected="selected">{TEXT_PLEASE_SELECT}...</option>
-							<!-- BEGIN module_list_block -->
-								<option value="{VALUE}">{NAME}</option>
-							  <!-- END module_list_block -->
-							</select>
-					   <input class="btn btn-info" type="submit" name="submit" value="{TEXT_VIEW_DETAILS}">
-					</div>
+				<legend>
+					<h2><i class="icon-info-sign"></i> {HEADING_MODULE_DETAILS}</h2>
+				</legend>
+				<div class="form-group">
+					<select name="file" class="form-control">
+					<option value="" selected="selected">{TEXT_PLEASE_SELECT}...</option>
+					<!-- BEGIN module_list_block -->
+						<option value="{VALUE}">{NAME}</option>
+					  <!-- END module_list_block -->
+					</select>
+				</div>
+				<div class="form-group">
+					   <button class="btn btn-info" type="submit" name="submit" value="{TEXT_VIEW_DETAILS}">{TEXT_VIEW_DETAILS}</button>
 				</div>
 			</fieldset>
 		</form>	

@@ -1,5 +1,5 @@
 <!-- BEGIN main_block -->
-<div class="row-fluid">
+<div class="row">
 	<!-- BEGIN tool_list_block -->
 	<script type="text/javascript">
 	$(document).ready(function(){
@@ -8,7 +8,7 @@
 		$("div.media.{TOOL_DIR} i").addClass(TOOL_DIR);
 	});
 	</script>
-		<div class="media {TOOL_DIR} span5 well">
+		<div class="equal media {TOOL_DIR} col-md-6 well">
 			<a class="pull-left no-underline" href="{ADMIN_URL}/admintools/tool.php?tool={TOOL_DIR}">
 				<i class="icon-4x icon-admintools"></i>
 			</a>

@@ -7,34 +7,37 @@
 <hr>
 <!-- BEGIN reload_block -->
 		<!-- Addons Modal -->
-		<div id="addonsModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="helpLabel" aria-hidden="true">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h3 id="helpLabel">{TXT_ADMIN_SETTINGS}</h3>
-			</div>
-			<div class="modal-body">
-				<p>{MESSAGE_RELOAD_ADDONS}</p>
-				<form action="{RELOAD_URL}" method="post">
-					<label class="checkbox inline">
-						<input {DISPLAY_MODULES} type="checkbox" name="reload_modules" id="reload_modules" value="true"> {MODULES}
-					</label>
-					<label class="checkbox inline">
-						<input {DISPLAY_TEMPLATES} type="checkbox" name="reload_templates" id="reload_templates" value="true"> {TEMPLATES}
-					</label>
-					<label class="checkbox inline">
-						<input {DISPLAY_LANGUAGES} type="checkbox" name="reload_languages" id="reload_languages" value="true"> {LANGUAGES}
-					</label>
-					<input class="btn btn-danger" type="submit" name="submit" value="{TEXT_RELOAD}" />
-				</form>	
-			</div>
-			<div class="modal-footer">
-				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-			</div>
-		</div>
-		<!-- Addons Modal -->
+		<div class="modal fade" id="addonsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><!-- Help Modal -->
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h3 id="helpLabel">{TXT_ADMIN_SETTINGS}</h3>
+					</div>
+					<div class="modal-body">
+						<p>{MESSAGE_RELOAD_ADDONS}</p>
+						<form action="{RELOAD_URL}" method="post">
+							<label class="checkbox inline">
+								<input {DISPLAY_MODULES} type="checkbox" name="reload_modules" id="reload_modules" value="true"> {MODULES}
+							</label>
+							<label class="checkbox inline">
+								<input {DISPLAY_TEMPLATES} type="checkbox" name="reload_templates" id="reload_templates" value="true"> {TEMPLATES}
+							</label>
+							<label class="checkbox inline">
+								<input {DISPLAY_LANGUAGES} type="checkbox" name="reload_languages" id="reload_languages" value="true"> {LANGUAGES}
+							</label>
+							<input class="btn btn-danger" type="submit" name="submit" value="{TEXT_RELOAD}" />
+						</form>	
+					</div>
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 <!-- END reload_block -->
-<div class="row-fluid">
-	<div class="media span4 well" style="{DISPLAY_MODULES}">
+<div class="row">
+	<div class="equal media col-md-4 well" style="{DISPLAY_MODULES}">
 		<a class="pull-left no-underline" href={ADMIN_URL}/modules/index.php>
 			<i class="icon-4x icon-puzzle-piece"></i>
 		</a>
@@ -48,7 +51,7 @@
 			{MODULES_OVERVIEW}
 		</div>
 	</div>
-	<div class="media span4 well" style="{DISPLAY_TEMPLATES}">
+	<div class="equal media col-md-4 well" style="{DISPLAY_TEMPLATES}">
 		<a class="pull-left no-underline" href="{ADMIN_URL}/templates/index.php">
 			<i class="icon-4x icon-copy"></i>
 		</a>
@@ -62,7 +65,7 @@
 			{TEMPLATES_OVERVIEW}
 		</div>
 	</div>
-	<div class="media span4 well" style="{DISPLAY_LANGUAGES}">
+	<div class="equal media col-md-4 well" style="{DISPLAY_LANGUAGES}">
 		<a class="pull-left no-underline" href="{ADMIN_URL}/languages/index.php">
 			<i class="icon-4x icon-comments-alt"></i>
 		</a>

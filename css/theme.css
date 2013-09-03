@@ -23,8 +23,11 @@ and add it like the following exaples
 .icon-admintools.wysiwyg_admin:before { content:"\f035"; }
 
 /* theme color sheme **green**/
-body.green h1, body.green h2, body.green h3, body.green h4, body.green h5, body.green h6, body.green a { color: #006600; }
-body.green a:hover, body.green a:focus { color: #003300; }
+body.green h1, body.green h2, body.green h3, body.green h4, body.green h5, body.green h6, body.green legend { color: #85C226; }
+body.green div.alert h1, body.green div.alert h2, body.green div.alert h3, body.green div.alert h4, body.green div.alert h5,
+body.green div.alert h6, body.green div.alert legend { color: #000000; }
+a.navbar-brand { color:#85C226!important; }
+/*body.green a:hover, body.green a:focus { color: #003300; }*/
 
 /* helpers */
 a>i { cursor: pointer; }
@@ -35,10 +38,14 @@ a.popOver:hover, a.popOver:focus { cursor: help; }
 
 /* style fixes */
 #wrap {	margin-top: 30px; }
+#top-buttons a {width: 50px; }
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus { color: #FFFFFF!important; }
 .controls > .radio:first-child, .controls > .checkbox:first-child { margin-left: 10px; }
-.row-fluid>.media:first-child {	margin-top: 15px; }
+.row>.media:first-child {	margin-top: 15px; }
+.row { margin: 0px!important; }
 .fileupload { margin-bottom: 10px; }
+.fade.in { opacity: 0.9!important; }
+
 
 /* content */
 .content-box {
@@ -72,8 +79,7 @@ a.popOver:hover, a.popOver:focus { cursor: help; }
 .header_list_actions { text-align: left; width: 150px; }
 .header_list_block { text-align: left; width: 180px; }
 .header_list_menu_title, .list_menu_title, .left, .form_submit .left, .header_list_type {
-    padding-bottom: 4px;
-    padding-top: 4px;
+    padding: 4px 0 4px 5px;
     text-align: left;
 }
 .header_list_page_id, .list_page_id {
@@ -111,7 +117,7 @@ a.popOver:hover, a.popOver:focus { cursor: help; }
 img.page_list_rights {
     border: medium none;
     float: left;
-    margin: 0;
+    margin: 0 10px 0 3px;
     vertical-align: middle;
 }
 .pages_list_header {}
@@ -121,12 +127,12 @@ img.page_list_rights {
     display: block;
     float: left;
     padding-right: 7px;
-    margin-right: 10px;
 }
 .pages_list ul {
     font-weight: normal;
     margin: 0;
-    padding: 0;
+	padding: 0 0 0 5px;
+/*	border: 1px dashed #E67817;*/
 }
 .pages_list ul li { list-style-type: none; margin: 2px 0; }
 table.pages_view tr, tr.sectionrow { background: none repeat scroll 0 0 #FDFDFD; }

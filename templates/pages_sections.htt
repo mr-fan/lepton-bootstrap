@@ -1,8 +1,7 @@
 <!-- BEGIN main_block -->
-	<div class="jsadmin jcalendar hide"></div>
-
-<div class="row-fluid">
-<div class="span4">
+<div class="jsadmin jcalendar hide"></div>
+<div class="row">
+<div class="col-md-6">
 	<a data-content="
 		<!-- BEGIN show_modify_block -->
 		{LAST_MODIFIED} {MODIFIED_BY} ({MODIFIED_BY_USERNAME}), {MODIFIED_WHEN}
@@ -11,18 +10,18 @@
 		href="#" title=""
 		data-toggle="popover"
 		data-html="true"
-		class="popOver btn"
+		class="popOver btn btn-default"
 		data-original-title="{TEXT_CURRENT_PAGE}: <b>{PAGE_TITLE}</b> - ID: {PAGE_ID}"
 		data-trigger="hover">
 		<i class="icon-info-sign"></i> {HEADING_MANAGE_SECTIONS}
 	</a>
 </div>
-<div class="span5 offset3">
-	<a href="{ADMIN_URL}/pages/modify.php?page_id={PAGE_ID}" class="btn btn-info btn-primary" rel="tooltip" data-placement="bottom" data-original-title="{HEADING_MODIFY_PAGE}">
+<div class="col-md-5 col-md-offset-1">
+	<a href="{ADMIN_URL}/pages/modify.php?page_id={PAGE_ID}" class="btn btn-primary" rel="tooltip" data-placement="bottom" data-original-title="{HEADING_MODIFY_PAGE}">
 		<i class="icon-edit"></i> {HEADING_MODIFY_PAGE}
 	</a>
 	<!-- BEGIN show_section_block -->
-	<a href="{ADMIN_URL}/pages/settings.php?page_id={PAGE_ID}" class="btn btn-info btn-primary" rel="tooltip" data-placement="bottom" data-original-title="{TEXT_CHANGE_SETTINGS}">
+	<a href="{ADMIN_URL}/pages/settings.php?page_id={PAGE_ID}" class="btn btn-primary" rel="tooltip" data-placement="bottom" data-original-title="{TEXT_CHANGE_SETTINGS}">
 		<i class="icon-preferences"></i> {TEXT_CHANGE_SETTINGS}
 	</a>		
 	<!-- END show_section_block -->
@@ -30,7 +29,7 @@
 </div>
 
 <hr>	
-<form name="section_properties" action="{ADMIN_URL}/pages/sections_save.php?page_id={VAR_PAGE_ID}" method="post">
+<form name="section_properties" action="{ADMIN_URL}/pages/sections_save.php?page_id={VAR_PAGE_ID}" method="post" role="form">
 	<table cellpadding="0" cellspacing="0" border="0" width="100%" class="table table-hover">
 		<thead>
 			<tr class="sections_list">
@@ -54,34 +53,38 @@
 				</td>
 				<td>{LINK_MODIFY_URL_VAR_MODUL_NAME}</td>
 				<td class="{INPUT_ATTRIBUTE}"><span {STYLE_DISPLAY_SECTION_BLOCK}>
-					<select name="block{VAR_SECTION_ID}" class="input-medium">
+					<select name="block{VAR_SECTION_ID}" class="form-control input-sm">
 					{SET_NONE_DISPLAY_OPTION}
 					<!-- BEGIN block_block -->
 						<option value="{VALUE}"{SELECTED}>{NAME}</option>
 					<!-- END block_block -->
 					</select></span>&nbsp;
 				</td>
-				<td><input class="input-medium" type="text" value="{SECTION_NAME}" name="section_name[{VAR_SECTION_ID}]"></td>
+				<td><input class="form-control input-sm" type="text" value="{SECTION_NAME}" name="section_name[{VAR_SECTION_ID}]"></td>
 				<td class="list_pubdate_start">
-					<div class="input-append">
-						<input type="text" id="start_date{VAR_SECTION_ID}" name="start_date{VAR_SECTION_ID}" value="{VALUE_PUBL_START}" class="input-medium">
-						<button id="trigger_start{VAR_SECTION_ID}" class="btn">
-							<img src="{THEME_URL}/images/calendar_add_16.png" style="cursor:pointer;" title="{TEXT_CALENDAR}" alt="{TEXT_CALENDAR}" >
-						</button>
-						<button onclick="document.section_properties.start_date{VAR_SECTION_ID}.value=''" class="btn">
-							<img src="{THEME_URL}/images/{CLOCK_DEL_16_PNG}" style="cursor:pointer;" alt="{TEXT_DELETE_DATE}" title="{TEXT_DELETE_DATE}">
-						</button>
+					<div class="input-group input-group-sm">
+						<input type="text" id="start_date{VAR_SECTION_ID}" name="start_date{VAR_SECTION_ID}" value="{VALUE_PUBL_START}" class="form-control">
+						<span class="input-group-btn">
+							<button id="trigger_start{VAR_SECTION_ID}" class="btn btn-default">
+								<img src="{THEME_URL}/images/calendar_add_16.png" style="cursor:pointer;" title="{TEXT_CALENDAR}" alt="{TEXT_CALENDAR}" >
+							</button>
+							<button onclick="document.section_properties.start_date{VAR_SECTION_ID}.value=''" class="btn btn-default">
+								<img src="{THEME_URL}/images/{CLOCK_DEL_16_PNG}" style="cursor:pointer;" alt="{TEXT_DELETE_DATE}" title="{TEXT_DELETE_DATE}">
+							</button>
+						</span>
 					</div>
 				</td>
 				<td class="list_pubdate_end">
-					<div class="input-append">
-						<input type="text" id="end_date{VAR_SECTION_ID}" name="end_date{VAR_SECTION_ID}" value="{VALUE_PUBL_END}" class="input-medium">
-						<button id="trigger_stop{VAR_SECTION_ID}" class="btn">
-							<img src="{THEME_URL}/images/calendar_add_16.png" alt="{TEXT_CALENDAR}" style="cursor: pointer;" title="{TEXT_CALENDAR}">
-						</button>
-						<button onclick="document.section_properties.end_date{VAR_SECTION_ID}.value=''" class="btn">
-							<img src="{THEME_URL}/images/{CLOCK_DEL_16_PNG}" style="cursor:pointer;" alt="{TEXT_DELETE_DATE}" title="{TEXT_DELETE_DATE}">
-						</button>
+					<div class="input-group input-group-sm">
+						<input type="text" id="end_date{VAR_SECTION_ID}" name="end_date{VAR_SECTION_ID}" value="{VALUE_PUBL_END}" class="form-control">
+						<span class="input-group-btn">
+							<button id="trigger_stop{VAR_SECTION_ID}" class="btn btn-default">
+								<img src="{THEME_URL}/images/calendar_add_16.png" alt="{TEXT_CALENDAR}" style="cursor: pointer;" title="{TEXT_CALENDAR}">
+							</button>
+							<button onclick="document.section_properties.end_date{VAR_SECTION_ID}.value=''" class="btn btn-default">
+								<img src="{THEME_URL}/images/{CLOCK_DEL_16_PNG}" style="cursor:pointer;" alt="{TEXT_DELETE_DATE}" title="{TEXT_DELETE_DATE}">
+							</button>
+						</span>
 					</div>
 				</td>
 				<td>{VAR_MOVE_UP_URL}</td>
@@ -98,7 +101,7 @@
 			<tr>
 				<td></td><td align="left" colspan="{DEBUG_COLSPAN_SIZE}">
 				<br />
-				<input class="btn btn-success" type="submit" name="save" value="{TEXT_SAVE}" class="input_medium" />
+				<input type="submit" name="save" value="{TEXT_SAVE}" class="input_medium" />
 				</td>
 			</tr>
 		</tbody>
@@ -117,7 +120,7 @@
 				<!-- END module_block -->
 			</select>
 			&nbsp;&nbsp;
-			<input class="btn btn-success" type="submit" name="submit" value="{TEXT_ADD}" class="add" />
+			<input type="submit" name="submit" value="{TEXT_ADD}" class="add" />
 	  </td>
 	</tr>
   </table>

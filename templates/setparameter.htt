@@ -42,11 +42,11 @@
 		<table summary="" cellpadding="4" cellspacing="0" width="100%">
 			<tr>
 				<td>
-					<input type="submit" name="save" value="{SAVE_TEXT}" />
-					<input type="submit" name="cancel"  value="{CANCEL}" />
+					<input type="submit" name="save" value="{SAVE_TEXT}">
+					<input type="reset" name="reset"  value="{RESET}">
 				</td>
 				<td>
-					<input type="reset" name="reset"  value="{RESET}" />
+					<input type="submit" name="cancel"  value="{CANCEL}">
 				</td>
 			</tr>
 		</table>

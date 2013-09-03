@@ -9,38 +9,38 @@
 	<i class="icon-info-sign"></i> {WELCOME_MESSAGE}. {CURRENT_USER} {DISPLAY_NAME}.
 </div>
 {WARNING}
-<div class="row-fluid">
-  <div class="span4 well" style="{DISPLAY_PAGES};">
+<div class="row">
+  <div class="equal col-md-4 well" style="{DISPLAY_PAGES};">
 	<h3>{PAGES}</h3>
 	<p>{PAGES_OVERVIEW}</p>
-	<p><a href="{ADMIN_URL}/pages/index.php" class="btn"><i class="icon-pages"></i> {PAGES}</a></p>
+	<p><a href="{ADMIN_URL}/pages/index.php" class="btn btn-default"><i class="icon-pages"></i> {PAGES}</a></p>
   </div><!--/span-->
-  <div class="span4 well" style="{DISPLAY_ADDONS};">
+  <div class="equal col-md-4 well" style="{DISPLAY_ADDONS};">
 	<h3>{ADDONS}</h3>
 	<p>{ADDONS_OVERVIEW}</p>
-	<p><a href="{ADMIN_URL}/addons/index.php" class="btn"><i class="icon-addons"></i> {ADDONS}</a></p>
+	<p><a href="{ADMIN_URL}/addons/index.php" class="btn btn-default"><i class="icon-addons"></i> {ADDONS}</a></p>
   </div><!--/span-->
-  <div class="span4 well" style="{DISPLAY_SETTINGS};">
+  <div class="equal col-md-4 well" style="{DISPLAY_SETTINGS};">
 	<h3>{SETTINGS}</h3>
 	<p>{SETTINGS_OVERVIEW}</p>
-	<p><a href="{ADMIN_URL}/settings/index.php" class="btn"><i class="icon-settings"></i> {SETTINGS}</a></p>
+	<p><a href="{ADMIN_URL}/settings/index.php" class="btn btn-default"><i class="icon-settings"></i> {SETTINGS}</a></p>
   </div><!--/span-->
 </div><!--/row-->
-<div class="row-fluid">
-  <div class="span4 well" style="{DISPLAY_ACCESS};">
+<div class="row">
+  <div class="equal col-md-4 well" style="{DISPLAY_ACCESS};">
 	<h3>{ACCESS}</h3>
 	<p>{ACCESS_OVERVIEW}</p>
-	<p><a href="{ADMIN_URL}/access/index.php" class="btn"><i class="icon-access"></i> {ACCESS}</a></p>
+	<p><a href="{ADMIN_URL}/access/index.php" class="btn btn-default"><i class="icon-access"></i> {ACCESS}</a></p>
   </div><!--/span-->
-  <div class="span4 well" style="{DISPLAY_MEDIA};">
+  <div class="equal col-md-4 well" style="{DISPLAY_MEDIA};">
 	<h3>{MEDIA}</h3>
 	<p>{MEDIA_OVERVIEW}</p>
-	<p><a href="{ADMIN_URL}/media/index.php" class="btn"><i class="icon-media"></i> {MEDIA}</a></p>
+	<p><a href="{ADMIN_URL}/media/index.php" class="btn btn-default"><i class="icon-media"></i> {MEDIA}</a></p>
   </div><!--/span-->
-  <div class="span4 well" style="{DISPLAY_ADMINTOOLS};">
+  <div class="equal col-md-4 well" style="{DISPLAY_ADMINTOOLS};">
 	<h3>{ADMINTOOLS}</h3>
 	<p>{ADMINTOOLS_OVERVIEW}</p>
-	<p><a href="{ADMIN_URL}/admintools/index.php" class="btn"><i class="icon-admintools"></i> {ADMINTOOLS}</a></p>
+	<p><a href="{ADMIN_URL}/admintools/index.php" class="btn btn-default"><i class="icon-admintools"></i> {ADMINTOOLS}</a></p>
   </div><!--/span-->
 </div><!--/row-->
 <!-- END main_block -->
