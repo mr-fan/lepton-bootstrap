@@ -1,7 +1,7 @@
 lepton-bootstrap
 ================
 
-Backend Template for Lepton 2.x - using Twitter Bootstrap 2.3.x 
+Backend Template for Lepton 2.x - using Twitter Bootstrap 3.x
 
 ##Get it working in Lepton 1.x ?
 (new backend functions/folders for modules will only work in 2.x and some problems within multipleFile Upload are know issues in the 1.x version so use it and test with upcomming 2.x !)
@@ -22,7 +22,7 @@ in
 ## Sepcial Features (until now)
 
 - Get ripped of the most layout tables
-- Using CSS Framework from Twitter Bootstrap <http://getbootstrap.com/2.3.2/index.html>
+- Using CSS Framework from Twitter Bootstrap <http://getbootstrap.com>
 - Using iconfont for UI
 - Special admintoolicons possible to setup via the theme.css (look at the CSS file <https://github.com/mr-fan/lepton-bootstrap/blob/master/css/theme.css>)
 - Using modals, tooltips, popovers and some other jquery stuff for easy additional content like helpmodal for editors
