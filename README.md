@@ -19,7 +19,7 @@ in
 		<script src="{WB_URL}/modules/lib_jquery/jquery-core/jquery-migrate.min.js" type="text/javascript"></script>
 
 
-## Sepcial Features (until now)
+## Special Features (until now)
 
 - Get ripped of the most layout tables
 - Using CSS Framework from Twitter Bootstrap <http://getbootstrap.com>
