@@ -33,7 +33,7 @@ if (defined('LEPTON_PATH')) {
 
  
 //Modul Description
-$template_description 	= 'Ein erweitertes Backend-Theme f&uuml;r Lepton CMS';
+$template_description 	= 'Ein erweitertes Backend-Theme f&uuml;r Lepton CMS das das CSS Framework Bootstrap nutzt';
 
 //Texts
 $TEXT['ADMIN_ONLY'] = 'diese Optionen nur Administratoren zug&auml;nglich machen';
