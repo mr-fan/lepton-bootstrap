@@ -12,7 +12,7 @@
 		<form name="users" action="users.php" method="post" class="form-inline" role="form">
 			<input type="hidden" name="action" value="delete">
 			<div class="form-group">
-				<select name="user_id" class="form-control">
+				<select class="form-control" name="user_id">
 				<!-- BEGIN list_block -->
 					<option value="{VALUE}">{NAME}</option>
 				<!-- END list_block -->
@@ -23,5 +23,6 @@
 		</form>
 	</div>
 </div>
+<hr>
 <h2 class="{DISPLAY_ADD}"><i class="icon-plus-sign-alt"></i> {HEADING_ADD_USER}</h2>
 <!-- END main_block -->

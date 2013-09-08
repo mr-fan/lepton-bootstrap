@@ -3,12 +3,12 @@
 <form name="user" action="{ACTION_URL}" method="post" class="{DISPLAY_ADD} form-horizontal">
 	<input type="hidden" name="user_id" value="{USER_ID}">
 	<input type="hidden" name="username_fieldname" value="{USERNAME_FIELDNAME}">
-		<p>{NEWUSERHINT}</p>
 		<div class="row">
 			<div class="col-md-5">
 				<div class="form-group">
 					<label class="control-label" for="{USERNAME_FIELDNAME}">{TEXT_USERNAME}</label>
 					<input class="form-control" type="text" id="{USERNAME_FIELDNAME}" name="{USERNAME_FIELDNAME}" value="{USERNAME}" placeholder="{USERNAME}">
+					<p class="text-info"><i class="icon-info-sign"></i> {NEWUSERHINT}</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-md-offset-1">
@@ -32,6 +32,14 @@
 		</div>
 		<div class="row">
 			<div class="col-md-5">
+				<div class="form-group">
+					<label class="radio-inline">
+						<input type="radio" name="active[]" id="active" value="1" {ACTIVE_CHECKED}> {TEXT_ACTIVE}
+					</label>
+					<label class="radio-inline">
+						<input type="radio" name="active[]" id="disabled" value="0" {DISABLED_CHECKED} > {TEXT_DISABLED}
+					</label>
+				</div>
 				<div class="form-group">
 					<label class="control-label" for="display_name">{TEXT_DISPLAY_NAME}</label>
 					<input class="form-control" type="text" id="display_name" name="display_name" value="{DISPLAY_NAME}" maxlength="255" placeholder="{DISPLAY_NAME}">
@@ -59,22 +67,12 @@
 					<!-- END group_list_block -->
 					</select>
 				</div>
-				<div class="form-group">
-					<label class="radio-inline">
-						<input type="radio" name="active[]" id="active" value="1" {ACTIVE_CHECKED}> {TEXT_ACTIVE}
-					</label>
-					<label class="radio-inline">
-						<input type="radio" name="active[]" id="disabled" value="0" {DISABLED_CHECKED} > {TEXT_DISABLED}
-					</label>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-			<hr>
-				<div class="form-group">
+				<div class="form-group well">
 					<input class="inline" type="submit" name="submit" value="{SUBMIT_TITLE}">
 					<input class="inline" type="reset" name="reset" value="{TEXT_RESET}">
+					<a style="{DISPLAY_EXTRA}" class="btn btn-primary pull-right" href="#" onclick="history.back(-1)">
+						<i class="icon-undo"></i>
+					</a>
 				</div>
 			</div>
 		</div>

@@ -6,22 +6,20 @@
 	<!-- END manage_groups_block -->
 </p>
 <hr>
-<div class="row-fluid">
-	<div class="span12">
-		<form name="groupsform" action="groups.php" method="post">
+<h2><i class="icon-group"></i> {HEADING_MODIFY_DELETE_GROUP}</h2>
+<div class="row">
+	<div class="col-md-12">
+		<form name="groupsform" action="groups.php" method="post" class="form-inline" role="form">
 			<input type="hidden" name="action" value="delete" />
-			<fieldset>
-			<legend><h2><i class="icon-group"></i> {HEADING_MODIFY_DELETE_GROUP}</h2></legend>
-				<div class="row-fluid">
-					<select name="group_id" class="span6 no-margin">
-					  <!-- BEGIN list_block -->
-					  <option value="{VALUE}">{NAME}</option>
-					  <!-- END list_block -->
-					</select>
-					<input type="submit" name="modify" value="{TEXT_MODIFY}" class="{DISPLAY_MODIFY} btn btn-success">
-					<input type="submit" name="delete" value="{TEXT_DELETE}" onclick="return confirm('{CONFIRM_DELETE}');" class="btn btn-danger {DISPLAY_DELETE}">
-				</div>
-			</fieldset>
+			<div class="form-group">
+				<select class="form-control" name="group_id">
+				  <!-- BEGIN list_block -->
+				  <option value="{VALUE}">{NAME}</option>
+				  <!-- END list_block -->
+				</select>
+			</div>
+			<input type="submit" name="modify" value="{TEXT_MODIFY}" class="{DISPLAY_MODIFY}">
+			<input type="submit" name="delete" value="{TEXT_DELETE}" onclick="return confirm('{CONFIRM_DELETE}');" class="{DISPLAY_DELETE}">
 		</form>
 	</div>
 </div>

@@ -35,9 +35,11 @@ a>i { cursor: pointer; }
 .no-margin { margin: 0px!important; }
 .all-hidden { display: none!important; }
 a.popOver:hover, a.popOver:focus { cursor: help; }
+tr.sectionrow {cursor: move!important; }
 
 /* style fixes */
-#wrap {	margin-top: 30px; }
+html { overflow-y: scroll; }
+#wrap {	margin-top: 35px; }
 #top-buttons a {width: 50px; }
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus { color: #FFFFFF!important; }
 .controls > .radio:first-child, .controls > .checkbox:first-child { margin-left: 10px; }
@@ -45,6 +47,13 @@ a.popOver:hover, a.popOver:focus { cursor: help; }
 .row { margin: 0px!important; }
 .fileupload { margin-bottom: 10px; }
 .fade.in { opacity: 0.9!important; }
+.modal-dialog { width: 85%!important; }
+
+.form-horizontal.control-label,
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline { margin-left: 10px; }
 
 
 /* content */
