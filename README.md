@@ -3,31 +3,26 @@ lepton-bootstrap
 
 Backend Template for Lepton 2.x - using Twitter Bootstrap 3.x
 
-##Get it working in Lepton 1.x ?
-(new backend functions/folders for modules will only work in 2.x and some problems within multipleFile Upload are know issues in the 1.x version so use it and test with upcomming 2.x !)
+###no support for Lepton 1.x versions
 
-Easy only change the 3 lines in lepton_bootstrap\templates\header.htt
+##known problems
 
-		<link href="{LEPTON_URL}/include/jscalendar/calendar-system.css" rel="stylesheet">
-		<script src="{LEPTON_URL}/modules/lib_jquery/jquery-core/jquery-core.min.js" type="text/javascript"></script>
-		<script src="{LEPTON_URL}/modules/lib_jquery/jquery-core/jquery-migrate.min.js" type="text/javascript"></script>
-
-in
-
-		<link href="{WB_URL}/include/jscalendar/calendar-system.css" rel="stylesheet">
-		<script src="{WB_URL}/modules/lib_jquery/jquery-core/jquery-core.min.js" type="text/javascript"></script>
-		<script src="{WB_URL}/modules/lib_jquery/jquery-core/jquery-migrate.min.js" type="text/javascript"></script>
+- Change page sections (with JS drag and Drop the Up and Down Arrows wont work properly) ??
+- some Problems with Admintools Backens CSS like in Dropleps may they could corrected with a /backend/admintoolname/backend.css 
+  for the lepton_bootstrap Theme (Didn't know the state of devellopment of this Lepton feature until now)
 
 
 ## Special Features (until now)
 
 - Get ripped of the most layout tables
 - Using CSS Framework from Twitter Bootstrap <http://getbootstrap.com>
-- Using iconfont for UI
+- Using iconfont <http://fortawesome.github.io/Font-Awesome> for UI
 - Special admintoolicons possible to setup via the theme.css (look at the CSS file <https://github.com/mr-fan/lepton-bootstrap/blob/master/css/theme.css>)
 - Using modals, tooltips, popovers and some other jquery stuff for easy additional content like helpmodal for editors
 - codecleaning and first HTML5/CSS3 Admintheme (not finished yet)
-- Change fast the complete look and feel with some of patterns from <http://www.subtlepatterns.com> (look at the login.css file <https://github.com/mr-fan/lepton-bootstrap/blob/master/css/login.css>)
+- Change fast the complete look and feel with som of patterns from <http://www.subtlepatterns.com> (look at the login.css file <https://github.com/mr-fan/lepton-bootstrap/blob/master/css/login.css>)
+- Automatic added Button CSS classes to input[type=submit] and input[type=reset] so all look the same way - Admintools and Wysiwygsections Save and Resets, too.
+- little jQuery eqal high script added for some needed cases
 
 
 ##Not for productive use!!
@@ -36,4 +31,4 @@ Initial Testversion to see if it's posible to use twitter bootstrap framework fo
 
 Please test and report issuse
 
-regards mr-fan
+have fun mr-fan
